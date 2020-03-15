@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+    color: black;
+}
+
+body {
+    background: white;
+}
+
+main {
+    width: 100%;
+}
+
+nav {
+    background-color: #ff6a00;
+    width: 100%;
+    height: 7vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    top: 0;
+    left: 0;
+}
+
+nav .nav {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    align-items: center;
+}
+
+nav .nav ul {
+    display: flex;
+    flex-wrap: warp;
+    width: 100%;
+    list-style: none;
+    justify-content: space-around;
+}
+
+nav .nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+nav .nav ul li a:hover {
+    background: #ff6a00;
+    transition: 0.5s;
+}
+
+img {
+    width: 100%;
+}
+
+.welcome {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.welcome .pro-img {
+    padding-top: 90px;
+    max-width: 280px;
+    width: 60%;
+    height: auto;
+}
+
+.welcome .pro-img img {
+    animation: pic 2s linear 1.3s 1;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 8px 15px 28px #000000c4;
+}
+
+.name {
+    background-color: #ff6a00;
+    color: white;
+}
+
+.h2 {
+    padding: 5px 0;
+    font-size: 20px;
+}
+
+.welcome .txt h1 {
+    animation-name: animeup;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+}
+
+.welcome .txt p {
+    animation-name: animedown;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+}
+
+.projects-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project {
+    background-color: #ff6a00;
+    text-align: center;
+    box-shadow: 8px 15px 28px #000000c4;
+}
+
+.project-tile {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 20px 40px;
+    background-color: #ff6a00;
+}
+
+.project-tile:hover {
+    background-color: #ff6a00;
+    box-shadow: 0 0 10px #ff6a00, 0 0 40px #ff6a00, 0 0 10px #ff6a00;
+    border: none;
+    transition: 0.4s;
+}
+
+.top-h2 {
+    border-bottom: #ff6a00 6px solid;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 68px;
+    text-align: center;
+    padding: 40px 0 10px 0;
+}
+
+.projects {
+    max-width: 900px;
+    padding: 3em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    justify-content: center;
+    align-self: center;
+}
+
+@media (max-width:650px) {
+    .welcome {
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .welcome .txt h1 {
+        font-size: 24px;
+        animation-name: anime;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+        animation-duration: 0.8s;
+        animation-delay: 2s;
+    }
+    .welcome .txt h1 span {
+        animation-name: span;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+        animation-duration: 2s;
+        animation-delay: 2s;
+    }
+    .welcome .txt p {
+        animation-name: anime1;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+        animation-duration: 0.8s;
+        animation-delay: 2s;
+    }
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .contact {
+        flex-direction: column;
+        justify-content: space-around;
+        align-self: center;
+    }
+}
+
+footer {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+i {
+    padding: 0 4px;
+    color: #ff6a00;
+}
+
+.contact {
+    text-align: center;
+    display: flex;
+    width: 80%;
+    padding: 4rem 0;
+    justify-content: space-around;
+}
+
+.contact p a {
+    text-decoration: none;
+}
+
+.contact p a:hover {
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.foot {
+    background-color: #ff6a00;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.foot p {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+
+/* animation */
+
+@keyframes anime {
+    0% {
+        opacity: 0;
+        transform: translateX(-90px);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.7;
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animeup {
+    0% {
+        opacity: 0;
+        transform: translateY(-90px);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.7;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animedown {
+    0% {
+        opacity: 0;
+        transform: translateY(90px);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.7;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes anime1 {
+    0% {
+        opacity: 0;
+        transform: translateX(90px);
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.7;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes span {
+    0% {
+        opacity: 0;
+        transform: translateX(-90px);
+        background-color: #ff6a00;
+        border: none;
+        transition: 0.4s;
+    }
+    50% {
+        opacity: 0.5;
+        background-color: #ff6a00;
+        box-shadow: 0 0 10px #ff6a00, 0 0 40px #ff6a00, 0 0 10px #ff6a00;
+        border: none;
+        transition: 0.4s;
+    }
+    75% {
+        opacity: 0.75;
+        transform: translateX(10px);
+        background-color: #ff6a00;
+        box-shadow: 0 0 10px #ff6a00, 0 0 40px #ff6a00, 0 0 10px #ff6a00;
+        border: none;
+        transition: 0.4s;
+    }
+    100% {
+        opacity: 1;
+        background-color: #ff6a00;
+        box-shadow: 0 0 10px #ff6a00, 0 0 40px #ff6a00, 0 0 10px #ff6a00;
+        border: none;
+        transition: 0.4s;
+    }
+}
+
+@keyframes pic {
+    0% {
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.2;
+        transform: rotate(12deg);
+    }
+    25% {
+        opacity: 0.5;
+        transform: rotate(-12deg);
+    }
+    35% {
+        transform: rotate(10deg);
+    }
+    45% {
+        opacity: 0.7;
+        transform: rotate(-10deg);
+    }
+    62.5% {
+        transform: rotate(7.5deg);
+    }
+    78% {
+        transform: rotate(-7.5deg);
+    }
+    85% {
+        transform: rotate(3.5deg);
+    }
+    95% {
+        transform: rotate(-3.5deg);
+    }
+    100% {
+        opacity: 1;
+    }
+}
