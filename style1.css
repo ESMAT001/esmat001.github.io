@@ -25,6 +25,7 @@ nav {
     flex-wrap: wrap;
     top: 0;
     left: 0;
+    z-index: 4;
 }
 
 nav .nav {
@@ -119,6 +120,21 @@ img {
     background-color: #ff6a00;
     text-align: center;
     box-shadow: 8px 15px 28px #000000c4;
+    opacity: 0;
+}
+
+.project-left {
+    transform: translateX(-30px);
+}
+
+.project-right {
+    transform: translateX(30px);
+}
+
+.apear {
+    opacity: 1;
+    transform: translate(0);
+    transition: all 1s;
 }
 
 .project-tile {
